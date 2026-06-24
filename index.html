@@ -3,28 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Recommendation System</title>
+    <title>Pro Movie Recommender</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🎬 Movie Recommender</h1>
-        <p>Select your favorite genres to get personalized suggestions.</p>
+    <div class="app-container">
+        <header>
+            <h1>🍿 Pro Recommender</h1>
+            <p>Discover your next favorite movie.</p>
+        </header>
 
-        <div class="preferences" id="genre-container">
-            <label><input type="checkbox" value="Action"> Action</label>
-            <label><input type="checkbox" value="Sci-Fi"> Sci-Fi</label>
-            <label><input type="checkbox" value="Comedy"> Comedy</label>
-            <label><input type="checkbox" value="Drama"> Drama</label>
-            <label><input type="checkbox" value="Romance"> Romance</label>
-            <label><input type="checkbox" value="Thriller"> Thriller</label>
-        </div>
+        <section class="controls">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for a movie..." autocomplete="off">
+            </div>
 
-        <button id="recommend-btn">Get Recommendations</button>
+            <div class="filters">
+                <h3>Select Genres:</h3>
+                <div class="preferences" id="genre-container">
+                    <label><input type="checkbox" value="Action"> Action</label>
+                    <label><input type="checkbox" value="Sci-Fi"> Sci-Fi</label>
+                    <label><input type="checkbox" value="Comedy"> Comedy</label>
+                    <label><input type="checkbox" value="Drama"> Drama</label>
+                    <label><input type="checkbox" value="Romance"> Romance</label>
+                    <label><input type="checkbox" value="Thriller"> Thriller</label>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="recommend-btn">Get Recommendations</button>
+                <div class="sort-container">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select">
+                        <option value="match">Best Match</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+        </section>
 
         <div id="evaluation" class="evaluation hidden"></div>
 
-        <div id="recommendations" class="movie-grid"></div>
+        <main>
+            <div id="recommendations" class="movie-grid">
+                </div>
+        </main>
     </div>
 
     <script src="script.js"></script>
