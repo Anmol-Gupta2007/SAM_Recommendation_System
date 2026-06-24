@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0 0 10px 0;
+}
+
+#status {
+    color: #ffeb3b;
+    font-weight: bold;
+}
+
+.video-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* The canvas will be injected via JS and must overlay the video */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
