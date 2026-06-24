@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webcam Face Detection</title>
+    <title>Movie Recommendation System</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="header">
-        <h1>Real-Time Face Detection</h1>
-        <p id="status">Loading AI Models...</p>
+    <div class="container">
+        <h1>🎬 Movie Recommender</h1>
+        <p>Select your favorite genres to get personalized suggestions.</p>
+
+        <div class="preferences" id="genre-container">
+            <label><input type="checkbox" value="Action"> Action</label>
+            <label><input type="checkbox" value="Sci-Fi"> Sci-Fi</label>
+            <label><input type="checkbox" value="Comedy"> Comedy</label>
+            <label><input type="checkbox" value="Drama"> Drama</label>
+            <label><input type="checkbox" value="Romance"> Romance</label>
+            <label><input type="checkbox" value="Thriller"> Thriller</label>
+        </div>
+
+        <button id="recommend-btn">Get Recommendations</button>
+
+        <div id="evaluation" class="evaluation hidden"></div>
+
+        <div id="recommendations" class="movie-grid"></div>
     </div>
-    
-    <div class="video-container">
-        <video id="video" width="720" height="560" autoplay muted></video>
-    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
